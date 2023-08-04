@@ -6,8 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class LoginPage {
- //"natalya.sinitsyna@rtlabs.ru"
- //"QY~rW56;fv"
+
     private SelenideElement
         nalogNotification = $("button.cross.ng-star-inserted"),
         buttonGatewayLogin = $("[aria-label=Войти]"),
