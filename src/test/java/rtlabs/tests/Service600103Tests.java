@@ -15,8 +15,8 @@ public class Service600103Tests extends TestBase { //change on TestBaseExtented
         step("Авторизоваться", () -> {
             loginPage.openPage()
                     //.removeBanners()
-                    .setLogin("login")
-                    .setPassword("pass")
+                    .setLogin("")
+                    .setPassword("")
                     .login();
         });
         step("Пройти услугу", () -> {

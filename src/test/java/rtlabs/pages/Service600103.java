@@ -21,7 +21,9 @@ public class Service600103 {
             //catalogReferences = $("[aria-label='Справки Выписки']"), //ошибка
             windowDraft = $(byText("У вас есть черновик заявления")),
             draft = $(byText("Начать заново")),
-            catalogReferences = $$(".catalog-link-info").get(25),
+            catalogReferences = $$(".catalog-link-item.ng-star-inserted").get(23),
+    //$$("div.flex-container-lg.catalog-link-item-wrap.ng-star-inserted").last().sibling(1),
+                    //$$("div.catalog-link-item.ng-star-inserted").get(23),
             service = $(byText("Справка об отсутствии судимости")),
             buttonStart = $(byText("Начать")),
             typeReference = $(byText("Электронная справка")),
