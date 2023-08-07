@@ -38,8 +38,10 @@ dependencies {
             "com.github.javafaker:javafaker:1.0.2",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            "com.codeborne:pdf-test:1.8.1"
-
+            "com.codeborne:pdf-test:1.8.1",
+            "com.codeborne:selenide-proxy:6.17.0",
+            "com.codeborne:pdf-test:1.8.1",
+            "org.hamcrest:hamcrest-library:2.2"
 
     )
 }

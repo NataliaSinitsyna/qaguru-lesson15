@@ -14,8 +14,8 @@ public class Service600103Tests extends TestBase { //change on TestBaseExtented
     void successGivenElectronicReference() {
         step("Авторизоваться", () -> {
             loginPage.openPage()
-                     .setLogin("natalya.sinitsyna@rtlabs.ru")
-                     .setPassword("QY~rW56;fv")
+                     .setLogin()
+                     .setPassword()
                      .login();
         });
         step("Пройти услугу по получению справки об отсутствии судимости", () -> {
