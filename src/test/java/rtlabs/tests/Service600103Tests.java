@@ -14,16 +14,16 @@ public class Service600103Tests extends TestBase { //change on TestBaseExtented
     void successGivenElectronicReference() {
         step("Авторизоваться", () -> {
             loginPage.openPage()
-                    //.removeBanners()
-                    .setLogin("")
-                    .setPassword("")
-                    .login();
+                     .setLogin("natalya.sinitsyna@rtlabs.ru")
+                     .setPassword("QY~rW56;fv")
+                     .login();
         });
-        step("Пройти услугу", () -> {
-            service600103
-                        //.removeBanners()
-                         .selectTypeReference()
-                         .service();
+        step("Пройти услугу по получению справки об отсутствии судимости", () -> {
+            service600103.selectTypeReference()
+                         .service600103();
+        });
+        step("Проверить направление заявления в ведомство", () -> {
+            service600103.resultsService();
         });
 
     }

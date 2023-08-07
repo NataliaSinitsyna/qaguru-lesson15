@@ -16,19 +16,14 @@ public class LoginPage {
 
     public LoginPage openPage() {
         open("/");
-        sleep(500);
-        nalogNotification.click();
+        sleep(5000);
+        if (nalogNotification.exists()) {
+            nalogNotification.click();
+        }
         buttonGatewayLogin.click();
 
         return this;
     }
-
-/*    public LoginPage removeBanners() {
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
-
-        return this;
-    }*/
 
     public LoginPage setLogin(String login) {
         loginInput.setValue(login);

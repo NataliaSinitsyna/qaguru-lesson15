@@ -6,8 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import rtlabs.tests.TestData;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ResultsService600103 {
 
@@ -21,8 +20,8 @@ public class ResultsService600103 {
             placeExtraditionPassport = $$(".data-item__value").last(),
             data = $(".value-text"),
             lk = $(".button-container"),
-            checkHeaderReference = $$(".feed-title.text-plain.truncate").first(),
-            statusReference = $$(".truncate").last();
+            checkHeaderReference = $$("h4.feed-title.text-plain.truncate").first(),
+            statusReference = $$("p.truncate").last();
 
 
     public ResultsService600103 verifyData() {
@@ -56,6 +55,7 @@ public class ResultsService600103 {
 
     public ResultsService600103 verifyReference() {
         lk.click();
+        sleep(2000);
         checkHeaderReference.shouldBe(Condition.text("Справка об отсутствии судимости"));
         statusReference.shouldBe(Condition.text("Заявление отправлено в ведомство"));
 
