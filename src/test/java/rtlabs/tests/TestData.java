@@ -16,6 +16,8 @@ public class TestData {
     public String serialAndNumberPassport = "5011 151515";
     public String dateExtraditionPassport = "17.11.2016";
     public String placeExtraditionPassport = "МВД г. Москва";
+    public String code = "500500";
+    public String placeBurn = "г. Москва";
     public String userPhone = "+7 915 260-89-06";
     public String userEmail = "natalya.sinitsyna@rtlabs.ru";
     public String address = "143986, обл. Московская, г. Балашиха, мкр. Железнодорожный, ул. Пионерская, д. 6, кв. 6";

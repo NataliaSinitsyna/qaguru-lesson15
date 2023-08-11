@@ -14,7 +14,7 @@ public class TestBase {
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://pgu-uat-fed.test.gosuslugi.ru";
-        Configuration.proxyEnabled = true;
-        Configuration.fileDownload = PROXY;
+        //Configuration.proxyEnabled = true;
+        //Configuration.fileDownload = PROXY;
     }
 }
