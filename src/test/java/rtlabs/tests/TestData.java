@@ -9,8 +9,8 @@ import java.util.Locale;
 public class TestData {
 
     //Faker faker = new Faker(new Locale("ru"));
-    public String login = "natalya.sinitsyna@rtlabs.ru";
-    public String password = "QY~rW56;fv";
+    public String login = "";
+    public String password = "";
     public String fullName = "Синицына Наталья Александровна";
     public String birthday = "21.03.1995";
     public String serialAndNumberPassport = "5011 151515";
