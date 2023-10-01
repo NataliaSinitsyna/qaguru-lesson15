@@ -1,14 +1,7 @@
 package rtlabs.tests;
 
-import com.github.javafaker.Faker;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 public class TestData {
 
-    //Faker faker = new Faker(new Locale("ru"));
     public String login = "";
     public String password = "";
     public String fullName = "Синицына Наталья Александровна";
@@ -19,7 +12,7 @@ public class TestData {
     public String code = "500500";
     public String placeBurn = "г. Москва";
     public String userPhone = "+7 915 260-89-06";
-    public String userEmail = "natalya.sinitsyna@rtlabs.ru";
+    public String userEmail = "";
     public String address = "143986, обл. Московская, г. Балашиха, мкр. Железнодорожный, ул. Пионерская, д. 6, кв. 6";
     public String documentFile = "Linux_komandy.pdf";
 

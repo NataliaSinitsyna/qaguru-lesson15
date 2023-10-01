@@ -21,7 +21,7 @@ public class ResultsService600103 {
             data = $(".value-text"),
             lk = $(".button-container"),
             checkHeaderReference = $$("h4.feed-title.text-plain.truncate").first(),
-            statusReference = $$("p.truncate").last();
+            statusReference = $$("a.feed-item.text-plain.feed-ORDER.feed-orders.is-updated.feed-header-unread").first();
 
 
     public ResultsService600103 verifyData() {
@@ -54,8 +54,9 @@ public class ResultsService600103 {
     }
 
     public ResultsService600103 verifyReference() {
+        sleep(3000);
         lk.click();
-        sleep(2000);
+        //sleep(2000);
         checkHeaderReference.shouldBe(Condition.text("Справка об отсутствии судимости"));
         statusReference.shouldBe(Condition.text("Заявление отправлено в ведомство"));
 

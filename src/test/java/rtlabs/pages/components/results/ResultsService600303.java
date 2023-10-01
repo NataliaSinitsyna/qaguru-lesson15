@@ -10,6 +10,8 @@ import com.codeborne.selenide.files.FileFilters;
 import java.io.File;
 
 import static com.codeborne.pdftest.PDF.*;
+import static com.codeborne.selenide.Configuration.timeout;
+import static com.codeborne.selenide.files.FileFilters.withExtension;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -27,7 +29,7 @@ public class ResultsService600303 {
 
     public ResultsService600303 verifyReference() {
         lk.click();
-        sleep(3000);
+        sleep(4000);
         if (qualityControl.exists()) {
             closeQC.click();
         }

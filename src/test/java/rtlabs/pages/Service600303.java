@@ -13,8 +13,8 @@ public class Service600303 {
     private SelenideElement
             windowDraft = $(byText("У вас есть черновик заявления")),
             draft = $(byText("Начать заново")),
-            catalogReferences = $$("div.catalog-link-item.ng-star-inserted").get(1),
-            service = $(byText("Извещение о состоянии лицевого счета в СФР")),
+            catalogReferences = $("[aria-label='Справки Выписки']"),
+            service = $(byText("Выписка из лицевого счёта в СФР")),
             button = $(byText("Получить выписку"));
 
     public Service600303 selectTypeReference() {
@@ -46,6 +46,7 @@ public class Service600303 {
     public Service600303 resultsData() throws Exception {
         sleep(1000);
         resultsService600303.verifyData();
+        sleep(10000);
 
         return this;
     }

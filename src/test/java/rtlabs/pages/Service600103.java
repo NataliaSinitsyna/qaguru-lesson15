@@ -19,7 +19,7 @@ public class Service600103 {
     private SelenideElement
             windowDraft = $(byText("У вас есть черновик заявления")),
             draft = $(byText("Начать заново")),
-            catalogReferences = $$("div.catalog-link-item.ng-star-inserted").get(1),
+            catalogReferences = $("[aria-label='Справки Выписки']"),
             service = $(byText("Справка об отсутствии судимости")),
             buttonStart = $(byText("Начать")),
             typeReference = $(byText("Электронная справка")),
@@ -77,13 +77,13 @@ public class Service600103 {
         confirmAddress.click();
         sleep(500);
         changeFio.click();
-        sleep(500);
+        sleep(1000);
         livesAnotherRegions.click();
         sleep(500);
         chooseFormatDownloadDocuments.click();
         sleep(500);
         uploadFileComponent.addFile(testData.documentFile);
-        sleep(2000);
+        sleep(4000);
         cont.click();
         sleep(1000);
         buttonEnd.click();
@@ -94,6 +94,7 @@ public class Service600103 {
     public Service600103 resultsService() {
         sleep(1000);
         resultsService600103.verifyReference();
+        sleep(10000);
 
         return this;
     }

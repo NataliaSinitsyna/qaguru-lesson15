@@ -18,19 +18,20 @@ public class Service600371 {
     private SelenideElement
             windowDraft = $(byText("У вас есть черновик заявления")),
             draft = $(byText("Начать заново")),
-            catalogReferences = $$("div.catalog-link-item.ng-star-inserted").get(9),
-            more = $("[tabindex=68]"),
+            catalogReferences = $("[aria-label='Ведомства']"),
+            FNS = $(byText("ФОМС")), //тут нужен скролл до ФНС
             service = $(byText("Получение ИНН")),
             buttonStart = $(byText("Начать")),
             formReference = $(byText("Перейти к заявлению")),
             buttonTrue = $(byText("Верно")),
-            signed = $(byText("Подписать")),
-            mainPage = $("[href=https://pgu-uat-fed.test.gosuslugi.ru]");
+            callCalender = $("input.text-input"),
+            signed = $(byText("Подписать"));
+
 
 
     public Service600371 selectTypeReference() {
         catalogReferences.click();
-        more.click();
+        FNS.scrollIntoView(true);
         service.click();
 
         return this;
@@ -51,19 +52,19 @@ public class Service600371 {
         sleep(500);
         buttonTrue.click();
         sleep(500);
-        calendarComponent.setDate("10", "Апрель", "2020");
+        callCalender.click();
+        calendarComponent.setDate(10, 4, 2020);
         buttonTrue.click();
         sleep(500);
         signed.click();
-        sleep(500);
-        mainPage.click();
 
         return this;
     }
 
     public Service600371 resultsService() {
-        sleep(1000);
+        sleep(10000);
         resultsService600371.verifyReference();
+        sleep(10000);
 
         return this;
     }}

@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.checkerframework.checker.units.qual.C;
 import rtlabs.tests.TestData;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ResultsService600371 {
@@ -18,9 +19,9 @@ public class ResultsService600371 {
             placeExtraditionPassport = $$(".data-item__value").get(3),
             code = $$(".data-item__value").get(4),
             placeBurn = $$(".data-item__value").get(5),
-            orderPage = $("[href=orders]"),
+            orderPage = $(byText("Заявления")),
             checkHeaderReference = $$("h4.feed-title.text-plain.truncate").first(),
-            statusReference = $$("p.truncate").last();
+            statusReference = $$("p.truncate").first();
 
 
     public ResultsService600371 verifyData() {
