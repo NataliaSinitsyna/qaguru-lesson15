@@ -14,6 +14,7 @@ public class Service600303Tests extends TestBaseExtended {
 
     @Test
     @Tag("remote_test")
+    @Tag("owner")
     @DisplayName("Успешное прохождение услуги по получению выписки из СФР")
     void successGivenElectronicReference() {
         step("Авторизоваться", () -> {
