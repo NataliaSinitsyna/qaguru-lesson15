@@ -5,7 +5,6 @@ import rtlabs.config.AuthConfig;
 
 public class TestData {
     AuthConfig config = ConfigFactory.create(AuthConfig.class, System.getProperties());
-
     public String login = config.username();
     public String password = config.password();
     public String fullName = "Синицына Наталья Александровна";
@@ -15,7 +14,7 @@ public class TestData {
     public String placeExtraditionPassport = "МВД г. Москва";
     public String code = "500500";
     public String placeBurn = "г. Москва";
-    public String userPhone = "+7 915 260-89-06";
+    public String userPhone = config.phone();
     public String userEmail = config.username();
     public String address = "143986, обл. Московская, г. Балашиха, мкр. Железнодорожный, ул. Пионерская, д. 6, кв. 6";
     public String documentFile = "Linux_komandy.pdf";

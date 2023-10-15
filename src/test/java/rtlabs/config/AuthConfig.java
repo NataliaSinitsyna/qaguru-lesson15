@@ -15,4 +15,7 @@ public interface AuthConfig extends Config {
         @Key("password")
         String password();
 
+        @Key("phone")
+        String phone();
+
     }

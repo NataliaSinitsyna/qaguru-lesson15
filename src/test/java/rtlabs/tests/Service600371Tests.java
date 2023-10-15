@@ -14,7 +14,6 @@ public class Service600371Tests extends TestBaseExtended {
 
     @Test
     @Tag("remote_test")
-    @Tag("owner")
     @DisplayName("Успешное прохождение услуги по получению ИНН")
     void successGivenElectronicReference() {
         step("Авторизоваться", () -> {
