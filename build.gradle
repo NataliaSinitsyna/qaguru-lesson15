@@ -41,7 +41,10 @@ dependencies {
             "com.codeborne:pdf-test:1.8.1",
             "com.codeborne:selenide-proxy:6.17.0",
             "com.codeborne:pdf-test:1.8.1",
-            "org.hamcrest:hamcrest-library:2.2"
+            "org.hamcrest:hamcrest-library:2.2",
+            "com.codeborne:selenide-selenoid:6.19.0",
+            "org.aeonbits.owner:owner:1.0.12"
+
 
     )
 }

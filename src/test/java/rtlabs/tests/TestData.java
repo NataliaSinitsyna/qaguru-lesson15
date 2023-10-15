@@ -1,9 +1,13 @@
 package rtlabs.tests;
 
-public class TestData {
+import org.aeonbits.owner.ConfigFactory;
+import rtlabs.config.AuthConfig;
 
-    public String login = "";
-    public String password = "";
+public class TestData {
+    AuthConfig config = ConfigFactory.create(AuthConfig.class, System.getProperties());
+
+    public String login = config.username();
+    public String password = config.password();
     public String fullName = "Синицына Наталья Александровна";
     public String birthday = "21.03.1995";
     public String serialAndNumberPassport = "5011 151515";
@@ -12,7 +16,7 @@ public class TestData {
     public String code = "500500";
     public String placeBurn = "г. Москва";
     public String userPhone = "+7 915 260-89-06";
-    public String userEmail = "";
+    public String userEmail = config.username();
     public String address = "143986, обл. Московская, г. Балашиха, мкр. Железнодорожный, ул. Пионерская, д. 6, кв. 6";
     public String documentFile = "Linux_komandy.pdf";
 

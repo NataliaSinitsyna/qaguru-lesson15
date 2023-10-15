@@ -1,7 +1,6 @@
 package rtlabs.tests;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.FileDownloadMode;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -9,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import rtlabs.helpers.Attach;
+import static com.codeborne.selenide.FileDownloadMode.FOLDER;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import java.util.Map;
 
@@ -20,18 +20,16 @@ public class TestBaseExtended {
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://pgu-uat-fed.test.gosuslugi.ru";
-//        Configuration.remote = System.getProperty("remoteBrowser",
-//                "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.remote = "http://45.155.207.31:4444/wd/hub";
+        Configuration.fileDownload = FOLDER;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
+                "enableVNC", false,
                 "enableVideo", true
         ));
-
         Configuration.browserCapabilities = capabilities;
-        Configuration.fileDownload = FileDownloadMode.FOLDER;
+
     }
 
     @BeforeEach

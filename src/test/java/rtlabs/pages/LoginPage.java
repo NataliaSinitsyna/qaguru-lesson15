@@ -27,6 +27,7 @@ public class LoginPage {
         }
         if (buttonGatewayLogin.exists()) {
             buttonGatewayLogin.click();
+            sleep(3000);
             loginInput.setValue(testData.login);
             passwordInput.setValue(testData.password);
             buttonLogin.click();
