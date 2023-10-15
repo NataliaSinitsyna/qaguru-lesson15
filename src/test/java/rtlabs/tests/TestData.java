@@ -1,8 +1,10 @@
 package rtlabs.tests;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.Tag;
 import rtlabs.config.AuthConfig;
 
+@Tag("owner")
 public class TestData {
     AuthConfig config = ConfigFactory.create(AuthConfig.class, System.getProperties());
     public String login = config.username();
