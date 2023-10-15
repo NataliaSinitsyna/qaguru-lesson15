@@ -3,7 +3,7 @@ package rtlabs.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "file:/tmp/secret.properties",
+        "file:/src/test/resources/secret.properties",
         "classpath:auth.properties"
 })
 
