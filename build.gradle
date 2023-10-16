@@ -8,7 +8,7 @@ repositories {
 }
 
 def allureVersion = "2.23.0",
-    slf4jVersion = "1.7.32"
+    slf4jVersion = "2.0.9"
 
 compileJava {
     options.encoding = 'UTF-8'
