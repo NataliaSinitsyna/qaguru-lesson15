@@ -28,8 +28,8 @@ public class TestBaseExtended {
                 "enableVNC", true,
                 "enableVideo", true,
                 "videoScreenSize", "1600x900",
-                "videoFrameRate", 6,
-                "videoCodec", "mpeg4"
+                "videoFrameRate", 6
+                //"videoCodec", "mpeg4"
         ));
         Configuration.browserCapabilities = capabilities;
 
