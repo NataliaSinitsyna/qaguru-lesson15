@@ -18,15 +18,18 @@ public class TestBaseExtended {
     static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = true;
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = "1600x900"; //1366x768 1600x900
         Configuration.baseUrl = "https://pgu-uat-fed.test.gosuslugi.ru";
         Configuration.remote = "http://45.155.207.31:4444/wd/hub";
         Configuration.fileDownload = FOLDER;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", false,
-                "enableVideo", true
+                "enableVNC", true,
+                "enableVideo", true,
+                "videoScreenSize", "1600x900",
+                "videoFrameRate", 6,
+                "videoCodec", "mpeg4"
         ));
         Configuration.browserCapabilities = capabilities;
 
