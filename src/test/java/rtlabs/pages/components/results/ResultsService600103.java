@@ -57,7 +57,7 @@ public class ResultsService600103 {
     public ResultsService600103 verifyReference() {
         sleep(3000);
         lk.click();
-        sleep(2000);
+        sleep(5000);
         checkHeaderReference.shouldBe(Condition.text("Справка об отсутствии судимости"));
         statusReference.shouldBe(Condition.text("Заявление отправлено в ведомство"));
 

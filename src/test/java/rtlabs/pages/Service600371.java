@@ -51,8 +51,9 @@ public class Service600371 {
         resultsService600371.verifyData();
         sleep(500);
         buttonTrue.click();
-        sleep(500);
+        sleep(1000);
         callCalender.click();
+        sleep(500);
         calendarComponent.setDate(10, 4, 2020);
         buttonTrue.click();
         sleep(500);
