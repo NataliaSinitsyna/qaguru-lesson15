@@ -83,7 +83,7 @@ public class Service600103 {
         chooseFormatDownloadDocuments.click();
         sleep(500);
         uploadFileComponent.addFile(testData.documentFile);
-        sleep(4000);
+        sleep(5000);
         cont.click();
         sleep(1000);
         buttonEnd.click();
