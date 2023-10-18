@@ -43,7 +43,7 @@ public class Service600371 {
             sleep(500);
             draft.click();
         }
-        sleep(500);
+        sleep(1000);
         buttonStart.click();
         sleep(500);
         formReference.click();
