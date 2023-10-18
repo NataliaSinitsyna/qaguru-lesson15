@@ -15,7 +15,7 @@ public class TestData {
     public String code = "500500";
     public String placeBurn = "г. Москва";
     public String userPhone = config.phone();
-    public String userEmail = config.username();
+    public String userEmail = config.email();
     public String address = "143986, обл. Московская, г. Балашиха, мкр. Железнодорожный, ул. Пионерская, д. 6, кв. 6";
     public String documentFile = "Linux_komandy.pdf";
 
